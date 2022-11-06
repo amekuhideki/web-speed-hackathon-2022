@@ -3,6 +3,7 @@ const path = require("path");
 
 const CopyPlugin = require("copy-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
+const webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 function abs(...args) {
@@ -59,6 +60,10 @@ module.exports = [
       new CopyPlugin({
         patterns: [{ from: PUBLIC_ROOT, to: DIST_PUBLIC }],
       }),
+      new webpack.NormalModuleReplacementPlugin(
+        /moment-timezone\/data\/packed\/latest\.json/,
+        require.resolve('./misc/timezone-definitions'),
+      ),
     ],
     resolve: {
       extensions: [".js", ".jsx"],
