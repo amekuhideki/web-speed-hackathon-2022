@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { Stack } from "../../../../../components/layouts/Stack";
-import { TrimmedImage } from "../../../../../components/media/TrimmedImage";
 import { Color, FontSize, Space } from "../../../../../styles/variables";
 
 const PlayerNumber = styled.span`
@@ -28,11 +27,9 @@ const PlayerName = styled.span`
 const Item = ({ image, name, number }) => {
   return (
     <Stack gap={Space * 1}>
-      <TrimmedImage
+      <img
         alt={`${name}選手のプロフィール写真`}
-        height={100}
-        src={image}
-        width={100}
+        src={`https://res.cloudinary.com/drx8mdpdm/image/upload/q_auto,f_auto,h_100,w_100${image}`}
       />
 
       <Stack horizontal alignItems="center" gap={Space / 2} wrap="wrap">
