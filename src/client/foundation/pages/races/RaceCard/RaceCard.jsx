@@ -46,7 +46,7 @@ export const RaceCard = () => {
       <Section dark shrink>
         <LiveBadge>Live</LiveBadge>
         <Spacer mt={Space * 2} />
-        <img src={`https://res.cloudinary.com/drx8mdpdm/image/upload/q_auto,f_auto,h_225,w_400${data.image}`} />
+        <img src={`https://res.cloudinary.com/drx8mdpdm/image/upload/c_fill,q_auto,f_auto,h_225,w_400${data.image}`} />
       </Section>
 
       <Spacer mt={Space * 2} />

@@ -92,7 +92,7 @@ const Item = ({ race }) => {
 
         <Stack.Item grow={0} shrink={0}>
           <Stack horizontal alignItems="center" gap={Space * 2}>
-            <img src={`https://res.cloudinary.com/drx8mdpdm/image/upload/q_auto,f_auto,h_100,w_100${race.image}`} />
+            <img src={`https://res.cloudinary.com/drx8mdpdm/image/upload/c_fill,q_auto,f_auto,h_100,w_100${race.image}`} />
             <RaceButton to={`/races/${race.id}/race-card`}>投票</RaceButton>
           </Stack>
         </Stack.Item>

@@ -29,7 +29,7 @@ const Item = ({ image, name, number }) => {
     <Stack gap={Space * 1}>
       <img
         alt={`${name}選手のプロフィール写真`}
-        src={`https://res.cloudinary.com/drx8mdpdm/image/upload/q_auto,f_auto,h_100,w_100${image}`}
+        src={`https://res.cloudinary.com/drx8mdpdm/image/upload/c_fill,q_auto,f_auto,h_100,w_100${image}`}
       />
 
       <Stack horizontal alignItems="center" gap={Space / 2} wrap="wrap">
