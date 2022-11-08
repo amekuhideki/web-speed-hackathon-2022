@@ -5,15 +5,14 @@ const common = require('./webpack.common.js');
 const client = common.findIndex(config => config.target === "web");
 const server = common.findIndex(config => config.target === "node");
 
-// mergeする情報
-const mergeConfig = {
-    mode: 'development',
-    devtool: 'source-map',
-}
-
 // mergeして設定
-const mergeClient = merge(common[client], mergeConfig);
-const mergeServer = merge(common[server], mergeConfig);
+const mergeClient = merge(common[client], {
+    mode: 'production',
+    devtool: 'source-map',
+});
+const mergeServer = merge(common[server], {
+    devtool: 'source-map',
+});
 
 /** @type {Array<import('webpack').Configuration>} */
 module.exports = [mergeClient, mergeServer];
