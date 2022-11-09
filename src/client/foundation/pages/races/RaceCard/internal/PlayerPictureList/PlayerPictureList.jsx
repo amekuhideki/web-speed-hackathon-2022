@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { Stack } from "../../../../../components/layouts/Stack";
 import { Color, FontSize, Space } from "../../../../../styles/variables";
@@ -27,7 +28,7 @@ const PlayerName = styled.span`
 const Item = ({ image, name, number }) => {
   return (
     <Stack gap={Space * 1}>
-      <img
+      <LazyLoadImage
         alt={`${name}選手のプロフィール写真`}
         src={`https://res.cloudinary.com/drx8mdpdm/image/upload/c_fill,q_auto,f_auto,h_100,w_100${image}`}
       />

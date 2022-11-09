@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { Container } from "../../../components/layouts/Container";
 import { Section } from "../../../components/layouts/Section";
@@ -51,7 +52,7 @@ export const RaceResult = () => {
       <Section dark shrink>
         <LiveBadge>Live</LiveBadge>
         <Spacer mt={Space * 2} />
-        <img src={`https://res.cloudinary.com/drx8mdpdm/image/upload/c_fill,q_auto,f_auto,h_225,w_400${data.image}`} />
+        <LazyLoadImage src={`https://res.cloudinary.com/drx8mdpdm/image/upload/c_fill,q_auto,f_auto,h_225,w_400${data.image}`} />
       </Section>
 
       <Spacer mt={Space * 2} />

@@ -2,6 +2,7 @@ import moment from "moment-timezone";
 import React, { useCallback, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { Container } from "../../../components/layouts/Container";
 import { Section } from "../../../components/layouts/Section";
@@ -75,7 +76,7 @@ export const Odds = () => {
       <Section dark shrink>
         <LiveBadge>Live</LiveBadge>
         <Spacer mt={Space * 2} />
-        <img src={`https://res.cloudinary.com/drx8mdpdm/image/upload/c_fill,q_auto,f_auto,h_225,w_400${data.image}`} width={400} />
+        <LazyLoadImage src={`https://res.cloudinary.com/drx8mdpdm/image/upload/c_fill,q_auto,f_auto,h_225,w_400${data.image}`} width={400} />
       </Section>
 
       <Spacer mt={Space * 2} />
